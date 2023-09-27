@@ -10,13 +10,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #000000; 
+  /* background-color: #000000;  */
   /* background-image: url('/Landingpage.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-position: center center;
-  opacity: 0.8;  */
+  opacity: 0.8;   */
 }
 
 a {

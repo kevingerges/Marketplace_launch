@@ -12,7 +12,7 @@ export default function Header() {
           <a
             href="/"
             class="flex text-3xl text-white font-large mb-5 md:mb-0"
-          >TrojanSqaure
+          > TrojanSquare
           </a>
           <button
             className="text-white pb-4 cursor-pointer leading-none px-3 py-1 md:hidden outline-none focus:outline-none content-end ml-auto"
