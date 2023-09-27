@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useState } from 'react';
+
 
 export default function Main() {
   const [email, setEmail] = useState('');
@@ -10,7 +12,7 @@ export default function Main() {
 
   const handleSubscribe = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/subscribe', {
+      const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
