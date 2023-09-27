@@ -65,7 +65,9 @@
 // /api/subscribe.js
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI;
+// Directly use the MongoDB connection string
+const MONGODB_URI = "mongodb+srv://kevingerges47:uY4t5bFwRAWpfhXv@cluster0.mexmeg0.mongodb.net/mydatabase?retryWrites=true&w=majority";
+
 
 let cached = global.mongoose;
 
