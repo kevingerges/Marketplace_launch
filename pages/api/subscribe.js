@@ -106,14 +106,14 @@ export default async function(req, res) {
    await dbConnect();
 
    if (req.method === 'OPTIONS') {
-      res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.com'); 
+      res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.app'); 
       res.setHeader('Access-Control-Allow-Methods', 'POST');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
       res.status(200).end(); 
       return;
    }
 
-   res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.com'); 
+   res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.app'); 
 
    const { email } = req.body;
    const trimmedEmail = email.trim();
