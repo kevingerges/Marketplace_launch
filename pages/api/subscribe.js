@@ -98,7 +98,7 @@ const subscriptionSchema = new mongoose.Schema({
 const Subscription = mongoose.models.Subscription || mongoose.model('Subscription', subscriptionSchema);
 
 const isValidEmail = (email) => {
-   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+   const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
    return emailRegex.test(email);
 };
 
@@ -106,14 +106,14 @@ export default async function(req, res) {
    await dbConnect();
 
    if (req.method === 'OPTIONS') {
-      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.com'); 
       res.setHeader('Access-Control-Allow-Methods', 'POST');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-      res.status(200).end();
+      res.status(200).end(); 
       return;
    }
 
-   res.setHeader('Access-Control-Allow-Origin', '*');
+   res.setHeader('Access-Control-Allow-Origin', 'trojansqaure.vercel.com'); 
 
    const { email } = req.body;
    const trimmedEmail = email.trim();
@@ -133,6 +133,7 @@ export default async function(req, res) {
          return res.status(200).json({ message: 'Subscription successful' });
       }
    } catch (error) {
-      return res.status(500).json({ message: 'Internal server error' });
+      console.error('Error subscribing:', error);
+      return res.status(500).json({ message: error.message });
    }
 }
